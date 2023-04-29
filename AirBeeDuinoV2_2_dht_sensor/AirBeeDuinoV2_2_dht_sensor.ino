@@ -40,7 +40,7 @@ DHT dht(DHTPIN, DHTTYPE);
     uint8_t id;
     int16_t temperature;
     uint16_t humidity;
-    uint16_t weight; 
+    uint32_t weight; 
     uint16_t bee_in; 
     uint16_t bee_out; 
     uint8_t vbat; 
@@ -109,7 +109,7 @@ if(f_wdt == 1)
           payload.data.id=1;
           payload.data.temperature = int16_t (dht.readTemperature()*10);
           payload.data.humidity = int16_t (dht.readHumidity()*10);
-          payload.data.weight=int16_t (getweight()*10);
+          payload.data.weight=int32_t (getweight()*10);
           payload.data.bee_in=0;
           payload.data.bee_out=0;
           payload.data.vbat= int(analogRead(A3) * (50 / 1023.0));
