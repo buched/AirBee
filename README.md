@@ -90,7 +90,7 @@ L'Arduino centralise les données est les envoie au backend sigfox. On a droit �
 
 Payload : 
 	
-	ID::uint:8 Temp::int:16:little-endian Hum::uint:16:little-endian Poids::uint:16:little-endian IN::uint:16:little-endian OUT::uint:16:little-endian Vbat::uint:8
+	ID::uint:8 Temp::int:16:little-endian Hum::uint:16:little-endian Poids::uint:32:little-endian IN::uint:16:little-endian OUT::uint:16:little-endian Vbat::uint:8
 
 Sigfox renvoie les données via des CallBacks vers serveur perso (php-->json) et backend web (app.we-sens.com). je n'ai rien fait coté web j'utilise le site hebergeur d'un copain (app.we-sens.com) qui m'affiche les données.
 
